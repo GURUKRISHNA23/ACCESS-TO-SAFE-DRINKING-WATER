@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access to Safe Drinking Water - CSP Project</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #091a20; }
+        ::-webkit-scrollbar-thumb { background: #1c3642; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #19c597; }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#091a20] via-[#0b2328] to-[#0d2b2e] text-white font-sans antialiased flex flex-col justify-between selection:bg-[#19c597] selection:text-[#091a20]">
+
+    <!-- =========================================================
+         VIEW 1: HOME DASHBOARD (Screenshot Layout)
+         ========================================================= -->
+    <main id="homeView" class="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex-grow flex flex-col items-center justify-center">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12 sm:mb-14">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/5 border border-[#7ee8d2]/20 text-xs font-semibold tracking-wider uppercase text-[#7ee8d2] mb-3">
+                <i class="fa-solid fa-droplet text-[#19c597]"></i>
+                <span>Sree Venkateswara College of Engineering • Kovur, Nellore</span>
+            </div>
+            <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-[3.3rem] tracking-wide uppercase text-[#b4f5d3] drop-shadow-sm leading-tight">
+                ACCESS TO SAFE DRINKING WATER
+            </h1>
+            <p class="text-xs sm:text-sm text-slate-300 mt-4 max-w-4xl mx-auto leading-relaxed">
+                Presented by: 
+                <span class="text-[#7ee8d2] font-medium">24JNAO5719 - T. Charan Sai Teja</span> • 
+                <span class="text-[#7ee8d2] font-medium">24JNAO5705 - T. Srinivasulu</span> • 
+                <span class="text-[#7ee8d2] font-medium">24JNAO5707 - T. Jyothiprakash</span> • 
+                <span class="text-[#7ee8d2] font-medium">24JNAO5735 - S. Thousif Ahamad</span> • 
+                <span class="text-[#7ee8d2] font-medium">24JNAO5683 - S.V.M Guru Krishna</span>
+            </p>
+        </header>
+
+        <!-- Row 1: Top 4 Cards -->
+        <section class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 mb-6 sm:mb-8">
+            
+            <!-- Card 1: Introduction -->
+            <div onclick="openSection('introduction')" class="cursor-pointer bg-[#152436]/95 hover:bg-[#1b2e44] border border-white/5 rounded-tl-[2.2rem] rounded-tr-[1.2rem] rounded-bl-[2.2rem] rounded-br-[1.2rem] p-7 min-h-[225px] flex flex-col items-center justify-start pt-9 text-center shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                <h2 class="font-display font-bold text-xl text-[#7ee8d2] mb-5 leading-snug">
+                    Introduction
+                </h2>
+                <button type="button" class="px-6 py-2.5 rounded-full bg-[#19c597] group-hover:bg-[#20d8a7] text-white font-semibold text-sm shadow-[0_0_20px_rgba(25,197,151,0.45)] group-hover:shadow-[0_0_28px_rgba(25,197,151,0.75)] transition-all">
+                    Read more
+                </button>
+            </div>
+
+            <!-- Card 2: Data Collection and Survey -->
+            <div onclick="openSection('survey')" class="cursor-pointer bg-[#152436]/95 hover:bg-[#1b2e44] border border-white/5 rounded-tl-[2.2rem] rounded-tr-[1.2rem] rounded-bl-[2.2rem] rounded-br-[1.2rem] p-7 min-h-[225px] flex flex-col items-center justify-start pt-9 text-center shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                <h2 class="font-display font-bold text-xl text-[#7ee8d2] mb-5 leading-snug">
+                    Data Collection<br>and Survey
+                </h2>
+                <button type="button" class="px-6 py-2.5 rounded-full bg-[#19c597] group-hover:bg-[#20d8a7] text-white font-semibold text-sm shadow-[0_0_20px_rgba(25,197,151,0.45)] group-hover:shadow-[0_0_28px_rgba(25,197,151,0.75)] transition-all">
+                    Read more
+                </button>
+            </div>
+
+            <!-- Card 3: Future Scope and Recommendations -->
+            <div onclick="openSection('future')" class="cursor-pointer bg-[#152436]/95 hover:bg-[#1b2e44] border border-white/5 rounded-tl-[2.2rem] rounded-tr-[1.2rem] rounded-bl-[2.2rem] rounded-br-[1.2rem] p-7 min-h-[225px] flex flex-col items-center justify-start pt-9 text-center shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                <h2 class="font-display font-bold text-xl text-[#7ee8d2] mb-5 leading-snug">
+                    Future Scope and<br>Recommendations
+                </h2>
+                <button type="button" class="px-6 py-2.5 rounded-full bg-[#19c597] group-hover:bg-[#20d8a7] text-white font-semibold text-sm shadow-[0_0_20px_rgba(25,197,151,0.45)] group-hover:shadow-[0_0_28px_rgba(25,197,151,0.75)] transition-all">
+                    Read more
+                </button>
+            </div>
+
+            <!-- Card 4: Benefits of Safe Water -->
+            <div onclick="openSection('benefits')" class="cursor-pointer bg-[#152436]/95 hover:bg-[#1b2e44] border border-white/5 rounded-tl-[2.2rem] rounded-tr-[1.2rem] rounded-bl-[2.2rem] rounded-br-[1.2rem] p-7 min-h-[225px] flex flex-col items-center justify-start pt-9 text-center shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                <h2 class="font-display font-bold text-xl text-[#7ee8d2] mb-5 leading-snug">
+                    Benefits of<br>Safe Water
+                </h2>
+                <button type="button" class="px-6 py-2.5 rounded-full bg-[#19c597] group-hover:bg-[#20d8a7] text-white font-semibold text-sm shadow-[0_0_20px_rgba(25,197,151,0.45)] group-hover:shadow-[0_0_28px_rgba(25,197,151,0.75)] transition-all">
+                    Read more
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Row 2: Bottom 3 Centered Cards -->
+        <section class="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-7">
+            
+            <!-- Card 5: Water Safety Measures -->
+            <div onclick="openSection('safety')" class="cursor-pointer bg-[#152436]/95 hover:bg-[#1b2e44] border border-white/5 rounded-tl-[2.2rem] rounded-tr-[1.2rem] rounded-bl-[2.2rem] rounded-br-[1.2rem] p-7 min-h-[225px] flex flex-col items-center justify-start pt-9 text-center shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                <h2 class="font-display font-bold text-xl text-[#7ee8d2] mb-5 leading-snug">
+                    Water Safety<br>Measures
+                </h2>
+                <button type="button" class="px-6 py-2.5 rounded-full bg-[#19c597] group-hover:bg-[#20d8a7] text-white font-semibold text-sm shadow-[0_0_20px_rgba(25,197,151,0.45)] group-hover:shadow-[0_0_28px_rgba(25,197,151,0.75)] transition-all">
+                    Read more
+                </button>
+            </div>
+
+            <!-- Card 6: My Activity -->
+            <div onclick="showActivityPage()" class="cursor-pointer bg-[#152436]/95 hover:bg-[#1b2e44] border border-white/5 rounded-tl-[2.2rem] rounded-tr-[1.2rem] rounded-bl-[2.2rem] rounded-br-[1.2rem] p-7 min-h-[225px] flex flex-col items-center justify-start pt-9 text-center shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                <h2 class="font-display font-bold text-xl text-[#7ee8d2] mb-2.5 leading-snug">
+                    My Activity
+                </h2>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4 max-w-[210px]">
+                    View our project’s journey, images, reports and volunteer experiences.
+                </p>
+                <button type="button" class="px-6 py-2.5 rounded-full bg-[#19c597] group-hover:bg-[#20d8a7] text-white font-semibold text-sm shadow-[0_0_20px_rgba(25,197,151,0.45)] group-hover:shadow-[0_0_28px_rgba(25,197,151,0.75)] transition-all">
+                    Read more
+                </button>
+            </div>
+
+            <!-- Card 7: Conclusion -->
+            <div onclick="openSection('conclusion')" class="cursor-pointer bg-[#152436]/95 hover:bg-[#1b2e44] border border-white/5 rounded-tl-[2.2rem] rounded-tr-[1.2rem] rounded-bl-[2.2rem] rounded-br-[1.2rem] p-7 min-h-[225px] flex flex-col items-center justify-start pt-9 text-center shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                <h2 class="font-display font-bold text-xl text-[#7ee8d2] mb-5 leading-snug">
+                    Conclusion
+                </h2>
+                <button type="button" class="px-6 py-2.5 rounded-full bg-[#19c597] group-hover:bg-[#20d8a7] text-white font-semibold text-sm shadow-[0_0_20px_rgba(25,197,151,0.45)] group-hover:shadow-[0_0_28px_rgba(25,197,151,0.75)] transition-all">
+                    Read more
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+         VIEW 2: DEDICATED MY ACTIVITY PAGE (Week 1 to Week 6)
+         ========================================================= -->
+    <section id="activityView" class="hidden max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex-grow">
+        <button onclick="showHomePage()" class="inline-flex items-center space-x-2 text-[#19c597] hover:text-[#b4f5d3] text-sm font-medium mb-6 transition-colors cursor-pointer">
+            <span>&larr;</span>
+            <span>Back to home</span>
+        </button>
+
+        <div class="flex items-center space-x-3.5 mb-2.5">
+            <span class="w-1.5 h-9 bg-[#f97316] rounded-full inline-block"></span>
+            <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+                My Activity
+            </h1>
+        </div>
+        <p class="text-slate-300 text-sm sm:text-base mb-10">
+            Choose a week to see what was done and learned.
+        </p>
+
+        <div id="weeksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Rendered by JS -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 px-4 text-xs text-slate-400/85 border-t border-white/5 bg-[#071318]/40 space-y-1">
+        <p class="font-semibold text-slate-200">
+            Sree Venkateswara College of Engineering (UGC Autonomous) • Northrajupalem, Kodavaluru (M), S.P.S.R Nellore (Dt) - 524316
+        </p>
+        <p>
+            Department of CSE • Guide: <span class="text-[#7ee8d2]">Mr. P. Prasad, M.Tech</span> • Co-ordinator: <span class="text-[#7ee8d2]">Mr. T. Sudharan Simha, M.Tech</span> • HOD: <span class="text-[#7ee8d2]">Dr. K. Venkata Subramanyam, M.Tech, Ph.D</span>
+        </p>
+    </footer>
+
+    <!-- =========================================================
+         MODAL POPUP
+         ========================================================= -->
+    <div id="detailModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity">
+        <div class="bg-[#132234] border border-[#7ee8d2]/25 rounded-3xl max-w-3xl w-full max-h-[88vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative text-slate-200">
+            
+            <button onclick="closeModal()" aria-label="Close modal" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-[#19c597] text-white flex items-center justify-center transition-colors cursor-pointer">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-center space-x-3.5 mb-5 pr-12">
+                <div id="modalIcon" class="w-11 h-11 rounded-2xl bg-[#19c597]/20 text-[#7ee8d2] flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <div>
+                    <h3 id="modalTitle" class="font-display font-bold text-xl sm:text-2xl text-[#b4f5d3]">Section Title</h3>
+                    <p id="modalSubtitle" class="text-xs text-slate-400 mt-0.5 hidden"></p>
+                </div>
+            </div>
+
+            <div id="modalBody" class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed"></div>
+
+            <div class="mt-8 pt-4 border-t border-white/10 flex justify-between items-center">
+                <span class="text-xs text-slate-400">SVCN • Kovur, Nellore</span>
+                <button id="modalCloseBtn" onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-[#19c597] hover:bg-[#20d8a7] text-white font-semibold text-sm shadow-[0_0_15px_rgba(25,197,151,0.4)] transition-all cursor-pointer">
+                    Back to Dashboard
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         JAVASCRIPT DATA & INTERACTIVITY
+         ========================================================= -->
+    <script>
+        const sectionData = {
+            introduction: {
+                title: "Introduction",
+                subtitle: "Community Service Project • Kovur, Nellore",
+                icon: "fa-solid fa-droplet",
+                content: `
+                    <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg relative">
+                        <img src="https://images.unsplash.com/photo-1541675154750-0444c7d51e8e?auto=format&fit=crop&w=1000&q=80"
+                             alt="Clean drinking water supply in rural community"
+                             class="w-full h-52 sm:h-60 object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#091a20] via-[#091a20]/70 to-transparent p-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-[#b4f5d3]">Importance of Hygienic Water in Our Daily Life</span>
+                        </div>
+                    </div>
+                    <p>
+                        Access to safe drinking water is one of the most important basic needs for human survival and good health. Even today, many communities face serious challenges related to water quality, improper storage, and lack of awareness about waterborne diseases.
+                    </p>
+                    <p>
+                        The Community Service Project titled <strong>“Access to Safe Drinking Water”</strong> was undertaken to understand these issues at the grassroots level. This project focused on identifying drinking water problems, educating people about safe water practices, and promoting hygiene and sanitation.
+                    </p>
+                    <p>
+                        The project was carried out at <strong>Kovur, Nellore</strong>, with active interaction and participation from local residents, aiming to improve awareness and encourage healthy practices within the community.
+                    </p>
+                    <div class="bg-[#0b1824] p-4 rounded-2xl border border-white/10 space-y-2">
+                        <h4 class="font-display font-bold text-sm text-[#7ee8d2]">Project Team & Academic Guidance (SVCN, Nellore):</h4>
+                        <ul class="list-disc list-inside space-y-1 text-slate-300 text-xs sm:text-sm">
+                            <li><strong>Presented by:</strong> 24JNAO5719 - T. Charan Sai Teja, 24JNAO5705 - T. Srinivasulu, 24JNAO5707 - T. Jyothiprakash, 24JNAO5735 - S. Thousif Ahamad, 24JNAO5683 - S.V.M Guru Krishna</li>
+                            <li><strong>Under the Guidance of:</strong> Mr. P. Prasad, M.Tech, Assistant Professor, Department of CSE</li>
+                            <li><strong>CSP Co-ordinator:</strong> Mr. T. Sudharan Simha, M.Tech, Assistant Professor, Department of CSE</li>
+                            <li><strong>Head of the Department:</strong> Dr. K. Venkata Subramanyam, M.Tech, Ph.D, Professor, Department of CSE</li>
+                        </ul>
+                    </div>
+                `
+            },
+            survey: {
+                title: "Data Collection and Survey",
+                subtitle: "Field Observations Across Kovur & Nellore Water Points",
+                icon: "fa-solid fa-clipboard-list",
+                content: `
+                    <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg relative">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1000&q=80"
+                             alt="Community water survey and inspection"
+                             class="w-full h-52 sm:h-60 object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#091a20] via-[#091a20]/70 to-transparent p-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-[#b4f5d3]">Grassroots Observation & Household Water Audit</span>
+                        </div>
+                    </div>
+                    <p>
+                        After obtaining formal permission from the <strong>MRO at the Sachivalayam</strong>, our team conducted systematic daily observations across <strong>Kovur, Kalivelapalem, Baba Nagar, and Gundlapalem (Nellore)</strong>. Data was collected through direct site inspections of RO purification plants, overhead water tanks, public handpumps, and direct interactions with local residents.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 my-3">
+                        <div class="bg-[#0b1824] p-4 rounded-2xl border border-[#19c597]/30">
+                            <span class="text-xl font-display font-extrabold text-[#b4f5d3]">Supply Timing</span>
+                            <p class="text-xs text-slate-400 mt-1">Monitored morning, afternoon, and evening regularity, duration, and waiting times.</p>
+                        </div>
+                        <div class="bg-[#0b1824] p-4 rounded-2xl border border-[#19c597]/30">
+                            <span class="text-xl font-display font-extrabold text-[#b4f5d3]">Physical Quality</span>
+                            <p class="text-xs text-slate-400 mt-1">Assessed water clarity, color, visible impurities, taste, and odor at delivery points.</p>
+                        </div>
+                    </div>
+                `
+            },
+            future: {
+                title: "Future Scope and Recommendations",
+                subtitle: "Sustainable Water Management Roadmap",
+                icon: "fa-solid fa-lightbulb",
+                content: `
+                    <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg relative">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=80"
+                             alt="Sustainable water infrastructure"
+                             class="w-full h-52 sm:h-60 object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#091a20] via-[#091a20]/70 to-transparent p-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-[#b4f5d3]">Long-Term Infrastructure & Community Action</span>
+                        </div>
+                    </div>
+                    <p>
+                        Based on our six-week field study in Kovur and surrounding Nellore localities, we recommend the following measures to ensure continuous, sustainable access to safe drinking water:
+                    </p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="bg-[#0b1824] p-3.5 rounded-xl border border-white/10">
+                            <strong class="text-[#7ee8d2]">1. Continuous Water Quality Monitoring:</strong> Establish scheduled physical and chemical testing at community RO plants and overhead tanks.
+                        </li>
+                        <li class="bg-[#0b1824] p-3.5 rounded-xl border border-white/10">
+                            <strong class="text-[#7ee8d2]">2. Piped Infrastructure Maintenance:</strong> Repair leaking valves promptly and enforce regular cleaning schedules for overhead storage tanks.
+                        </li>
+                    </ul>
+                `
+            },
+            benefits: {
+                title: "Benefits of Safe Water",
+                subtitle: "Public Health, Hygiene & Community Well-Being",
+                icon: "fa-solid fa-heart-pulse",
+                content: `
+                    <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg relative">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80"
+                             alt="Healthy rural community"
+                             class="w-full h-52 sm:h-60 object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#091a20] via-[#091a20]/70 to-transparent p-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-[#b4f5d3]">Impact of Safe Drinking Water on Daily Life</span>
+                        </div>
+                    </div>
+                    <p>
+                        Safe drinking water is essential for human health, hygiene, and overall well-being. Providing clean, uncontaminated water delivers immediate benefits to families across Kovur and Nellore:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-sm">
+                        <div class="bg-[#0b1824] p-4 rounded-2xl border border-white/10">
+                            <h4 class="font-display font-bold text-[#7ee8d2] mb-1">Prevention of Waterborne Diseases</h4>
+                            <p class="text-slate-300 text-xs">Eliminates exposure to pathogens responsible for cholera, typhoid, dysentery, and acute diarrhea.</p>
+                        </div>
+                        <div class="bg-[#0b1824] p-4 rounded-2xl border border-white/10">
+                            <h4 class="font-display font-bold text-[#7ee8d2] mb-1">Better Community Health</h4>
+                            <p class="text-slate-300 text-xs">Supports healthy growth in school children and protects elderly residents from gastric illnesses.</p>
+                        </div>
+                    </div>
+                `
+            },
+            safety: {
+                title: "Water Safety Measures",
+                subtitle: "Household Purification & Safe Handling Practices",
+                icon: "fa-solid fa-shield-halved",
+                content: `
+                    <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg relative">
+                        <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=1000&q=80"
+                             alt="Safe drinking water purification"
+                             class="w-full h-52 sm:h-60 object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#091a20] via-[#091a20]/70 to-transparent p-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-[#b4f5d3]">Essential Safeguards From Source to Glass</span>
+                        </div>
+                    </div>
+                    <p>
+                        During our community interactions in Kovur, we emphasized four core water safety measures:
+                    </p>
+                    <ul class="space-y-2.5 text-sm">
+                        <li class="flex items-start space-x-3 bg-[#0b1824] p-3.5 rounded-xl border border-white/5">
+                            <span class="text-[#19c597] font-bold">✓</span>
+                            <span><strong>Boiling Drinking Water:</strong> Bringing tap or well water to a rolling boil before cooling and drinking when RO water is unavailable.</span>
+                        </li>
+                        <li class="flex items-start space-x-3 bg-[#0b1824] p-3.5 rounded-xl border border-white/5">
+                            <span class="text-[#19c597] font-bold">✓</span>
+                            <span><strong>Covered Clean Storage Containers:</strong> Storing drinking water in narrow-necked vessels washed daily.</span>
+                        </li>
+                    </ul>
+                `
+            },
+            conclusion: {
+                title: "Conclusion",
+                subtitle: "Summary of Our Six-Week Community Service Study",
+                icon: "fa-solid fa-circle-check",
+                content: `
+                    <div class="rounded-2xl overflow-hidden border border-white/10 shadow-lg relative">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
+                             alt="Clean environment and sustainable water future"
+                             class="w-full h-52 sm:h-60 object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#091a20] via-[#091a20]/70 to-transparent p-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-[#b4f5d3]">Collective Responsibility for Clean Water</span>
+                        </div>
+                    </div>
+                    <p>
+                        The study on access to safe drinking water provided a comprehensive understanding of the availability, quality, and management of drinking water over an extended period. Regular observations helped in identifying both positive practices and existing challenges related to water supply, purification, storage, and hygiene.
+                    </p>
+                    <p class="bg-[#0b1824] p-4 rounded-2xl border border-[#19c597]/30 text-slate-200">
+                        In conclusion, the project emphasizes that continuous monitoring, improved infrastructure, public awareness, and sustainable water management practices are necessary to ensure long-term access to safe drinking water for all.
+                    </p>
+                `
+            }
+        };
+
+        // Exact photos from slides 4 to 9 (RO plants, overhead water tanks, Nellore/Kovur GPS Map Camera timestamps)
+        const weeklyReports = [
+            {
+                week: 1,
+                title: "Week 1",
+                subtitle: "Kovur, Nellore • Permission & Water Quality Check",
+                focus: "Official MRO Permission, Supply Regularity & Physical Quality Observation",
+                gpsLocations: [
+                    "Dhanalakshmi Puram Kakupalli 2 Road, Kalivelapalem, Nellore, AP (Lat 14.385227, Long 80.010307)",
+                    "Samanthula Vari Thopu Baba Nagar Road, Nellore, AP (Lat 14.393952, Long 80.015231)"
+                ],
+                defaultPhotos: [
+                    {
+                        url: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
+                        caption: "SVCN Students Inspecting RO Purification Plant & Logbook — Kalivelapalem, Nellore (GPS Tagged)"
+                    },
+                    {
+                        url: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+                        caption: "Overhead Water Tank Survey & Team Assessment — Baba Nagar Road, Nellore"
+                    }
+                ],
+                days: [
+                    { day: "Day 1", text: "Went to Sachivalayam for getting permission to “Community Service Project”. Took permission from MRO." },
+                    { day: "Day 2", text: "The regularity, timing, and duration of water supply were observed to understand daily availability." },
+                    { day: "Day 3", text: "The physical quality of drinking water was checked by observing its color, clarity, and presence of impurities." },
+                    { day: "Day 4", text: "The taste and smell of drinking water were observed to identify possible contamination." },
+                    { day: "Day 5", text: "Drinking water storage methods were observed, including cleanliness and whether containers were properly covered." },
+                    { day: "Day 6", text: "Cleanliness and hygiene around drinking water sources were checked and recorded." }
+                ]
+            },
+            {
+                week: 2,
+                title: "Week 2",
+                subtitle: "Gundlapalem, Nellore • Purification & RO Systems",
+                focus: "Purification Methods, Container Hygiene & Contamination Audit",
+                gpsLocations: [
+                    "Ballary Nellore Road, Gundlapalem, Nellore, AP (Lat 14.411223, Long 80.015473)"
+                ],
+                defaultPhotos: [
+                    {
+                        url: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
+                        caption: "Students Checking RO System Control Panel & Filtration Units — Gundlapalem, Nellore"
+                    }
+                ],
+                days: [
+                    { day: "Day 1", text: "The use of boiled water for drinking purposes was observed among users." },
+                    { day: "Day 2", text: "Availability and usage of water purifiers and RO systems were noted." },
+                    { day: "Day 3", text: "Awareness about different water purification methods was assessed." },
+                    { day: "Day 4", text: "Handling practices of drinking water containers were observed for hygiene." },
+                    { day: "Day 5", text: "Possible contamination sources such as open tanks, leaks, or dirty surroundings were identified." },
+                    { day: "Day 6", text: "Maintenance of taps, pipelines, and water storage tanks was observed." }
+                ]
+            },
+            {
+                week: 3,
+                title: "Week 3",
+                subtitle: "Gundlapalem & Baba Nagar • Accessibility Study",
+                focus: "Collection Distance, Morning/Afternoon/Evening Timings & Accessibility",
+                gpsLocations: [
+                    "Ballary Nellore Road, Gundlapalem, Nellore, AP (Lat 14.411239, Long 80.015479)",
+                    "Baba Nagar, Nellore, AP (Lat 14.420352, Long 80.009514)"
+                ],
+                defaultPhotos: [
+                    {
+                        url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+                        caption: "Water Plant Inspection & Pressure Gauge Monitoring — Gundlapalem"
+                    },
+                    {
+                        url: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=800&q=80",
+                        caption: "Community Water Collection Point Audit — Baba Nagar, Nellore"
+                    }
+                ],
+                days: [
+                    { day: "Day 1", text: "The distance travelled by people to collect drinking water was observed." },
+                    { day: "Day 2", text: "Availability of drinking water during morning hours was checked." },
+                    { day: "Day 3", text: "Drinking water availability during afternoon hours was observed." },
+                    { day: "Day 4", text: "Evening water supply conditions were monitored." },
+                    { day: "Day 5", text: "Difficulties faced during water collection, such as long waiting times, were noted." },
+                    { day: "Day 6", text: "Accessibility of drinking water for children and elderly people was observed." }
+                ]
+            },
+            {
+                week: 4,
+                title: "Week 4",
+                subtitle: "Baba Nagar, Nellore • Hygiene & Disease Awareness",
+                focus: "Waterborne Disease Awareness, Handwashing & Community Feedback",
+                gpsLocations: [
+                    "Baba Nagar Road, Nellore, AP (Lat 14.393953, Long 80.015236)"
+                ],
+                defaultPhotos: [
+                    {
+                        url: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=800&q=80",
+                        caption: "Overhead Tank Area Inspection & Community Hygiene Check — Nellore"
+                    }
+                ],
+                days: [
+                    { day: "Day 1", text: "Awareness about waterborne diseases caused by unsafe drinking water was observed." },
+                    { day: "Day 2", text: "Hygiene practices related to drinking water usage were checked." },
+                    { day: "Day 3", text: "Handwashing practices near drinking water areas were observed." },
+                    { day: "Day 4", text: "Availability of posters, instructions, or notices on safe drinking water was noted." },
+                    { day: "Day 5", text: "Role of teachers, authorities, or community leaders in promoting safe water practices was observed." },
+                    { day: "Day 6", text: "Feedback was collected from users regarding drinking water quality." }
+                ]
+            },
+            {
+                week: 5,
+                title: "Week 5",
+                subtitle: "Kalivelapalem, Nellore • Conservation & Sustainability",
+                focus: "Water Conservation, Rainwater Harvesting & Maintenance Schedules",
+                gpsLocations: [
+                    "Kalivelapalem, Nellore, AP (Lat 14.385170, Long 80.010710)",
+                    "Kalivelapalem, Nellore, AP (Lat 14.384991, Long 80.009935)"
+                ],
+                defaultPhotos: [
+                    {
+                        url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80",
+                        caption: "Handpump & Overhead Storage Tank Inspection — Kalivelapalem, Nellore"
+                    },
+                    {
+                        url: "https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=800&q=80",
+                        caption: "Groundwater Protection & Well Cover Audit — Kalivelapalem"
+                    }
+                ],
+                days: [
+                    { day: "Day 1", text: "Water wastage during drinking water usage was observed." },
+                    { day: "Day 2", text: "Water conservation practices followed by users were checked." },
+                    { day: "Day 3", text: "Reuse of water for cleaning and other non-drinking purposes was observed." },
+                    { day: "Day 4", text: "Awareness about rainwater harvesting was noted." },
+                    { day: "Day 5", text: "Maintenance schedules of drinking water sources were reviewed." },
+                    { day: "Day 6", text: "Sustainability of the drinking water supply was analyzed." }
+                ]
+            },
+            {
+                week: 6,
+                title: "Week 6",
+                subtitle: "Kalivelapalem, Nellore • Final Review & Conclusion",
+                focus: "Overall Quality Assessment, Challenges & Six-Week Summary",
+                gpsLocations: [
+                    "Kalivelapalem, Nellore, AP (Lat 14.385164, Long 80.010720)"
+                ],
+                defaultPhotos: [
+                    {
+                        url: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80",
+                        caption: "Final Six-Week Study Review & Community Handover — Kalivelapalem, Nellore"
+                    }
+                ],
+                days: [
+                    { day: "Day 1", text: "Overall availability of safe drinking water was reviewed." },
+                    { day: "Day 2", text: "Overall quality and safety of drinking water were assessed." },
+                    { day: "Day 3", text: "Health impacts related to drinking water consumption were observed." },
+                    { day: "Day 4", text: "Major problems and challenges in accessing safe drinking water were identified." },
+                    { day: "Day 5", text: "Suggestions and measures to improve access to safe drinking water were prepared." },
+                    { day: "Day 6", text: "Final conclusion and summary of the six-week study were written." }
+                ]
+            }
+        ];
+
+        function renderWeeksGrid() {
+            const grid = document.getElementById('weeksGrid');
+            grid.innerHTML = weeklyReports.map((w, idx) => `
+                <div onclick="openWeekModal(${idx})" class="cursor-pointer bg-[#152436]/95 hover:bg-[#1b2e44] border border-white/5 rounded-2xl p-6 flex flex-col items-start justify-between shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-xl mb-4 shadow-inner">
+                            📅
+                        </div>
+                        <h2 class="font-display font-bold text-xl text-white mb-1.5">
+                            ${w.title}
+                        </h2>
+                        <p class="text-xs text-slate-400 mb-6 leading-relaxed">
+                            ${w.subtitle}
+                        </p>
+                    </div>
+                    <button type="button" class="px-6 py-2.5 rounded-full bg-[#f97316] group-hover:bg-[#fb923c] text-white font-semibold text-sm shadow-[0_4px_15px_rgba(249,115,22,0.35)] transition-all">
+                        Read more
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function getSavedWeekPhotos(weekNum) {
+            try {
+                const raw = localStorage.getItem(`csp_water_week_${weekNum}_photos`);
+                return raw ? JSON.parse(raw) : [];
+            } catch (e) { return []; }
+        }
+
+        function saveWeekPhoto(weekNum, dataUrl, caption) {
+            try {
+                const existing = getSavedWeekPhotos(weekNum);
+                existing.push({ url: dataUrl, caption: caption || `Field Photo — Week ${weekNum}` });
+                localStorage.setItem(`csp_water_week_${weekNum}_photos`, JSON.stringify(existing));
+            } catch (e) { alert("Storage limit reached."); }
+        }
+
+        function removeSavedPhoto(weekNum, photoIndex, weekIdx) {
+            try {
+                const existing = getSavedWeekPhotos(weekNum);
+                existing.splice(photoIndex, 1);
+                localStorage.setItem(`csp_water_week_${weekNum}_photos`, JSON.stringify(existing));
+                openWeekModal(weekIdx);
+            } catch (e) {}
+        }
+
+        function handlePhotoUpload(event, weekNum, weekIdx) {
+            const files = event.target.files;
+            if (!files || !files.length) return;
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        const canvas = document.createElement('canvas');
+                        const maxWidth = 800;
+                        const scale = Math.min(1, maxWidth / img.width);
+                        canvas.width = img.width * scale;
+                        canvas.height = img.height * scale;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                        saveWeekPhoto(weekNum, canvas.toDataURL('image/jpeg', 0.8), file.name.replace(/\.[^/.]+$/, ""));
+                        openWeekModal(weekIdx);
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        function showActivityPage() {
+            document.getElementById('homeView').classList.add('hidden');
+            document.getElementById('activityView').classList.remove('hidden');
+            renderWeeksGrid();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showHomePage() {
+            document.getElementById('activityView').classList.add('hidden');
+            document.getElementById('homeView').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openSection(key) {
+            const data = sectionData[key];
+            if (!data) return;
+            const modal = document.getElementById('detailModal');
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalSubtitle').textContent = data.subtitle || "";
+            document.getElementById('modalSubtitle').classList.remove('hidden');
+            document.getElementById('modalIcon').innerHTML = `<i class="${data.icon}"></i>`;
+            document.getElementById('modalBody').innerHTML = data.content;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openWeekModal(weekIdx) {
+            const w = weeklyReports[weekIdx];
+            if (!w) return;
+            const modal = document.getElementById('detailModal');
+            document.getElementById('modalTitle').textContent = `${w.title} Report — ${w.focus}`;
+            document.getElementById('modalSubtitle').textContent = w.subtitle;
+            document.getElementById('modalSubtitle').classList.remove('hidden');
+            document.getElementById('modalIcon').innerHTML = `<i class="fa-solid fa-calendar-check text-[#f97316]"></i>`;
+
+            const userPhotos = getSavedWeekPhotos(w.week);
+            const gpsBadgesHtml = w.gpsLocations.map(loc => `
+                <div class="flex items-start space-x-2 text-xs text-slate-300 bg-[#0b1824] px-3 py-2 rounded-xl border border-white/5">
+                    <i class="fa-solid fa-location-dot text-[#f97316] mt-0.5 shrink-0"></i>
+                    <span>${loc}</span>
+                </div>
+            `).join('');
+
+            const defaultPhotosHtml = w.defaultPhotos.map(p => `
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-[#0b1824] shadow-md">
+                    <img src="${p.url}" alt="${p.caption}" class="w-full h-44 object-cover">
+                    <p class="p-2.5 text-xs text-slate-300 font-medium">${p.caption}</p>
+                </div>
+            `).join('');
+
+            const userPhotosHtml = userPhotos.map((p, pIdx) => `
+                <div class="rounded-2xl overflow-hidden border border-[#f97316]/40 bg-[#0b1824] shadow-md relative group">
+                    <img src="${p.url}" alt="${p.caption}" class="w-full h-44 object-cover">
+                    <button onclick="removeSavedPhoto(${w.week}, ${pIdx}, ${weekIdx})" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/70 hover:bg-red-600 text-white text-xs flex items-center justify-center transition-colors cursor-pointer">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <p class="p-2.5 text-xs text-[#fdba74] font-medium truncate">${p.caption}</p>
+                </div>
+            `).join('');
+
+            const daysHtml = w.days.map(d => `
+                <div class="bg-[#0b1824] p-3.5 rounded-2xl border-l-4 border-[#f97316] flex items-start space-x-3">
+                    <span class="font-display font-bold text-xs uppercase tracking-wider text-[#f97316] bg-[#f97316]/10 px-2.5 py-1 rounded-lg shrink-0 mt-0.5">
+                        ${d.day}
+                    </span>
+                    <p class="text-sm text-slate-200 leading-relaxed">${d.text}</p>
+                </div>
+            `).join('');
+
+            document.getElementById('modalBody').innerHTML = `
+                <div class="space-y-2">
+                    <h4 class="font-display font-bold text-xs uppercase tracking-wider text-[#7ee8d2]">GPS Geotagged Field Locations:</h4>
+                    <div class="space-y-1.5">${gpsBadgesHtml}</div>
+                </div>
+                <div class="space-y-3 pt-1">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h4 class="font-display font-bold text-xs uppercase tracking-wider text-[#7ee8d2]">Field Inspection Photos (Slides 4–9):</h4>
+                        <label class="cursor-pointer inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-[#f97316]/20 hover:bg-[#f97316] text-[#fdba74] hover:text-white border border-[#f97316]/40 text-xs font-semibold transition-all">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>+ Upload Your Photo</span>
+                            <input type="file" accept="image/*" multiple onchange="handlePhotoUpload(event, ${w.week}, ${weekIdx})" class="hidden">
+                        </label>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                        ${userPhotosHtml}
+                        ${defaultPhotosHtml}
+                    </div>
+                </div>
+                <div class="space-y-2.5 pt-2">
+                    <h4 class="font-display font-bold text-xs uppercase tracking-wider text-[#7ee8d2]">Daily Field Observations (Day 1 – Day 6):</h4>
+                    ${daysHtml}
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+            document.getElementById('detailModal').classList.remove('flex');
+        }
+
+        document.getElementById('detailModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+</body>
+</html>
